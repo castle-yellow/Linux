@@ -1,10 +1,10 @@
 
 CFLAGS = -g
 
-all: pipe_lat pipe_thr \
-	unix_lat unix_thr \
-	tcp_lat tcp_thr \
-	tcp_local_lat tcp_remote_lat \
+all: pipe_lat pipe_thr pipe_bandwidth\
+	unix_lat unix_thr unix_bandwidth\
+	tcp_lat tcp_thr tcp_bandwidth\
+	tcp_local_lat tcp_remote_lat\
 	shm
 
 run:
@@ -17,8 +17,8 @@ run:
 
 clean:
 	rm -f *~ core
-	rm -f pipe_lat pipe_thr 
-	rm -f unix_lat unix_thr 
-	rm -f tcp_lat tcp_thr 
-	rm -f tcp_local_lat tcp_remote_lat
+	rm -f pipe_lat pipe_thr pipe_bandwidth
+	rm -f unix_lat unix_thr unix_bandwidth
+	rm -f tcp_lat tcp_thr tcp_bandwidth
+	rm -f tcp_local_lat tcp_remote_lat 
 	rm -f shm 
