@@ -108,7 +108,7 @@ int main(int argc, char *argv[])
     delta = (stop.tv_sec - start.tv_sec) +
 	     (stop.tv_usec - start.tv_usec)/(double)1000000;
     
-    printf("bandwidth: %lli MB/s\n", (size*count)/(2*delta));
+    printf("bandwidth: %lf MB/s\n", (2*size*count)/(1000000*delta));
 
   }
   
