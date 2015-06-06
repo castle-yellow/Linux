@@ -6,8 +6,8 @@
 #include <asm/uaccess.h>
 #include <linux/sched.h>
 //系统中未使用的系统调用号 unsigned int clear_and_return_cr0(void);
-#define __NR_syscall 223
-#define SYS_CALL_TABLE_ADDRESS 0xc057e110 //步骤 2 中的 sys_call_table 的地址
+#define __NR_syscall 314
+#define SYS_CALL_TABLE_ADDRESS c165e140 //步骤 2 中的 sys_call_table 的地址
 void setback_cr0(unsigned int val);
 int orig_cr0;
 unsigned long *sys_call_table = 0;
