@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <linux/module.h> 
 #include <linux/kernel.h> 
 #include <linux/init.h>
@@ -48,3 +49,11 @@ module_init(init_addsyscall);
 module_exit(exit_addsyscall);
 MODULE_AUTHOR("WY");
 MODULE_LICENSE("GPL");
+=======
+obj-m := syscall.o
+KERNELDIR := /lib/modules/$(shell uname –r)/build PWD := $(shell pwd)
+modules:
+$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
+modules_install:
+$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
+>>>>>>> 25dcc5dffa7faf53eb54ce12dad9606de8659daf
